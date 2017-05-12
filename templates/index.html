@@ -13,49 +13,35 @@
                     <h3>Farm</h3>
                     <p>(earns 10-20 gold)</p>
                     <form action="/process_money" method="post">
-                        <input type="hidden" name="building" value="farm">
-                        <input type="submit" value="Find Gold!">
+                        <input name="farm" type="submit" value="Find Gold!">
                     </form>
                 </div>
                 <div class="box">
                     <h3>Cave</h3>
                     <p>(earns 5-10 gold)</p>
                     <form action="/process_money" method="post">
-                        <input type="hidden" name="outdoors" value="cave">
-                        <input type="submit" value="Find Gold!">
+                        <input name="cave" type="submit" value="Find Gold!">
                     </form>
                 </div>
                 <div class="box">
                     <h3>House</h3>
                     <p>(earns 2-5 gold)</p>
                     <form action="/process_money" method="post">
-                        <input type="hidden" name="home" value="house">
-                        <input type="submit" value="Find Gold!">
+                        <input name="house" type="submit" value="Find Gold!">
                     </form>
                 </div>
                 <div class="box">
                     <h3>Casino</h3>
                     <p>(earns 2-5 gold)</p>
                     <form action="/process_money" method="post">
-                        <input type="hidden" name="vegas" value="casino">
-                        <input type="submit" value="Find Gold!">
+                        <input name="casino" type="submit" value="Find Gold!">
                     </form>
                 </div>
             </div> <!-- locations -->
             <div id="activities">
                 <p>Activities:</p>
                 <div id="history">
-                    <!-- <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p>
-                    <p>Earned 15 gold from the farm! Timestamp</p> -->
+                    {{ tags|safe }}
                 </div> <!-- history -->
             </div> <!-- Activities -->
         </div> <!-- wrapper -->
