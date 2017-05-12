@@ -34,11 +34,12 @@ def process():
         if randomNum > 0:
             pTag += '<p>Earned ' + str(randomNum) +' gold from casino!  ' +str(now.strftime('%Y/%m/%d %H:%M')) + '</p>'
         else:
-            pTag += '<p>Lost ' + str(randomNum) +' gold from casino!  ' +str(now.strftime('%Y/%m/%d %H:%M')) + '</p>'
+            pTag += '<p>Lost ' + str(abs(randomNum)) +' gold from casino!  ' +str(now.strftime('%Y/%m/%d %H:%M')) + '</p>'
         if goldNum < 0:
             goldNum = 0
     return redirect('/')
 
 app.run(debug = True)
 
-# tags = Markup("<p>some text here</p>")
+# FUTURE TWEAKS:
+# - Use sessions to store information instead of global variables
